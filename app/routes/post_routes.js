@@ -41,7 +41,6 @@ router.get('/post/', (req, res, next) => {
     // console.log(response.data[1].data.children)
     if (response.data[1].data.children.length > 0) {
       const post_data = response.data[1].data.children.filter(post => post.data.author !== "AutoModerator" && post.data.body)
-      console.log(post_data)
 
       const stories = post_data.map(story => story.data.body.replace(/[\r\n\\]/g, ' ').split(' ').filter(word => word !== ''))
       
