@@ -27,6 +27,9 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use(requestLogger)
 
+app.get('/', (req, res, next) => {
+  res.status(200).json({ msg: "Server is running" })
+})
 app.use('/posts', postRoutes)
 
 app.use(errorHandler)
