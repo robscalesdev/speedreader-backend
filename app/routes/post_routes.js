@@ -1,9 +1,5 @@
 const express = require('express')
-const passport = require('passport')
 const axios = require('axios')
-
-// pull in Mongoose model for examples
-const Post = require('../models/post')
 
 // this is a collection of methods that help us detect situations when we need
 // to throw a custom error
